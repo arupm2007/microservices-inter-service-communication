@@ -1,0 +1,7 @@
+### self configurations #####
+server:
+  port: 8082
+
+spring:
+  application:
+    name: account-service

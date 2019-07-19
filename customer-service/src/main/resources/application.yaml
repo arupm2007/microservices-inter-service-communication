@@ -1,0 +1,13 @@
+### self configurations #####
+server:
+  port: 8081
+  
+# service  name  
+spring:
+  application:
+    name: customer-service
+
+###property    
+account:
+  service:
+    name: account-service

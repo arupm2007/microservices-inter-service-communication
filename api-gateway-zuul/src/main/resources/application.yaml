@@ -1,0 +1,29 @@
+### self configurations #####
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway-zuul  
+
+###configuration of other modules
+zuul:
+  prefix: /api/v1
+  routes:
+    account-service:
+      path: /account-service/**
+      serviceId: account-service
+    customer-service:
+      path: /customer-service/**
+      serviceId: customer-service
+
+### eureka configuration
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  registerWithEureka: true
+  fetchRegistry: true
